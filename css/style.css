@@ -367,6 +367,10 @@
             display: none;
             }
             
+            
+        .footer-logo {
+            width: 400px;
+        }
 
 
             nav {
@@ -471,4 +475,8 @@
             .hero p br {
                 display: none;
             }
+            
+        .footer-logo {
+            width: 300px;
+        }
         }
