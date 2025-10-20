@@ -440,6 +440,10 @@
             .social-links {
                 gap: 2rem;
             }
+
+            .icono-derecha {
+                display: none;
+            }
         }
 
         @media (max-width: 770px) {
