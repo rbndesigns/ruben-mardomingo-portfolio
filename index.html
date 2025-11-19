@@ -1,170 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ruben M - Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruben M - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
 
-<link rel="icon" type="image/png" href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg" sizes="128x128" />
-
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg"
+      sizes="128x128"
+    />
 
     <!-- Enlace remix icons -->
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
-/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
 
+    <!-- Enlace a Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Enlace a Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">  
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-
-   <!-- jQuery -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-   <!-- Enlace al CSS de AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Enlace al CSS de AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <body>
+    <header data-aos="fade-down" data-aos-duration="2000">
+      <div class="logo">
+        <img
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728"
+          alt=""
+        />
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-</head>
+      <nav id="nav">
+        <a href="index.html">HOME</a>
+        <a href="#proyectos">PROYECTOS</a>
+        <a href="#sobre">SOBRE MÍ</a>
+        <a href="#contacto">CONTACTO</a>
+      </nav>
 
-
-<body>
-   <header data-aos="fade-down" data-aos-duration="2000">
-        <div class="logo">
-          <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728" alt="">
-        </div>
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav id="nav">
-            <a href="index.html">HOME</a>
-            <a href="#proyectos">PROYECTOS</a>
-            <a href="#sobre">SOBRE MÍ</a>
-            <a href="#contacto">CONTACTO</a>
-        </nav>
-
-        <div class="icono-derecha">
-            <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768" alt="">
-        </div>
-
+      <div class="icono-derecha">
+        <img
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768"
+          alt=""
+        />
+      </div>
     </header>
 
     <main>
-
-<section class="hero">
+      <section class="hero">
         <h1>NO ES DECORACIÓN, ES COMUNICACIÓN.</h1>
-        <p>UNA BUENA ESTRATEGIA VISUAL GENERA IMPACTO,<br> RELEVANCIA Y CONEXIÓN CON LA AUDIENCIA.</p>
-    </section>
+        <p>
+          UNA BUENA ESTRATEGIA VISUAL GENERA IMPACTO,<br />
+          RELEVANCIA Y CONEXIÓN CON LA AUDIENCIA.
+        </p>
+      </section>
 
-    <section class="gallery" id="proyectos">
+      <section class="gallery" id="proyectos">
+        <a
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1000"
+          href="proyecto1.html"
+          class="gallery-item"
+        >
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Milbona%20Portada?updatedAt=1760975183118"
+            alt=""
+          />
 
+          <div class="gallery-overlay">
+            <i class="ri-arrow-right-down-line"></i>
+            <h6>
+              REDISEÑO <br />
+              DE PACKAGING
+            </h6>
+            <p>
+              Actualización gráfica que refuerza la identidad de Milbona High
+              Protein.
+            </p>
+          </div>
+        </a>
 
-<a data-aos="fade-up"  data-aos-anchor-placement="top-bottom" data-aos-duration="1000" href="proyecto1.html" class="gallery-item">
+        <a
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1500"
+          href="proyecto1.html"
+          class="gallery-item"
+        >
+          <video autoplay loop muted>
+            <source
+              src="https://ik.imagekit.io/jzanz3klfl/portfolio/OlvanaVideo?updatedAt=1763497444512"
+              type="video/mp4"
+            />
+          </video>
 
-    <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Milbona%20Portada?updatedAt=1760975183118" alt="">
+          <div class="gallery-overlay">
+            <i class="ri-arrow-right-down-line"></i>
+            <h6>DISEÑO <br />EDITORIAL</h6>
+            <p>
+              Diseño y maquetado de una revista wellness, construida desde una
+              dirección de arte limpia y equilibrada.
+            </p>
+            <p></p>
+          </div>
+        </a>
 
-    <div class="gallery-overlay">
-        <i class="ri-arrow-right-down-line"></i>
-        <h6>MILBONA <br>REBRANDING</h6>
-        <p>Diseño de identidad visual completa para startup tecnológica...</p>
-    </div>
-</a>
+        <a
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          href="proyecto1.html"
+          class="gallery-item"
+        >
+          <video autoplay loop muted>
+            <source
+              src="https://ik.imagekit.io/jzanz3klfl/portfolio/Cabecera%20SUzia%20video.mp4?updatedAt=1763202530118"
+              type="video/mp4"
+            />
+          </video>
+          <!-- <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Cabecera%20Suiza.jpg?updatedAt=1763200733039" alt=""> -->
 
+          <div class="gallery-overlay">
+            <i class="ri-arrow-right-down-line"></i>
+            <h6>IDENTIDAD DIGITAL & UX</h6>
+            <p>
+              Desarrollo de una plataforma visual que posiciona a Suiza como
+              destino cultural y turístico.
+            </p>
+          </div>
+        </a>
 
+        <a
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          href="proyecto1.html"
+          class="gallery-item"
+        >
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/HA.jpg?updatedAt=1763492122200"
+            alt=""
+          />
 
-<a data-aos="fade-up"  data-aos-anchor-placement="top-bottom" data-aos-duration="1500" href="proyecto1.html" class="gallery-item">
+          <div class="gallery-overlay">
+            <i class="ri-arrow-right-down-line"></i>
+            <h6>REBRANDING DEPORTIVO</h6>
+            <p>
+              Rediseño integral del club HA BASKET para acompañar su salto a una
+              identidad más sólida y profesional
+            </p>
+          </div>
+        </a>
 
-        <video autoplay loop muted>
-        <source src="https://ik.imagekit.io/jzanz3klfl/portfolio/OlvanaVideo?updatedAt=1763497444512" type="video/mp4">
-        </video>
+        <a
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          href="proyecto1.html"
+          class="gallery-item"
+        >
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/1-01.jpg
+        "
+            alt=""
+          />
 
-    <div class="gallery-overlay">
-        <i class="ri-arrow-right-down-line"></i>
-        <h6>CREACIÓN <BR> DE MARCA</h6>
-        <p>Diseño de identidad visual completa para startup tecnológica...</p>
-    </div>
-</a>
-
-
-
-<a  data-aos="fade-right"  data-aos-duration="1500"href="proyecto1.html" class="gallery-item">
-
-    <video autoplay loop muted>
-        <source src="https://ik.imagekit.io/jzanz3klfl/portfolio/Cabecera%20SUzia%20video.mp4?updatedAt=1763202530118" type="video/mp4">
-        </video>
-    <!-- <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Cabecera%20Suiza.jpg?updatedAt=1763200733039" alt=""> -->
-
-    <div class="gallery-overlay">
-        <i class="ri-arrow-right-down-line"></i>
-        <h6>IDENTIDAD DIGITAL & UX</h6>
-        <p>Desarrollo de una plataforma visual que posiciona a Suiza como destino cultural y turístico.</p>
-    </div>
-    
-</a>
-
-
-
-<a  data-aos="fade-left" data-aos-duration="1500" href="proyecto1.html" class="gallery-item">
-
-        <video autoplay loop muted>
-        <source src="https://ik.imagekit.io/jzanz3klfl/portfolio/render1-editado-rubenmardomingo.mp4?updatedAt=1763211416671" type="video/mp4">
-        </video>
-
-    <!-- <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/upscalemedia-transformed%20(3).png?updatedAt=1760956840686" alt=""> -->
-
-    <div class="gallery-overlay">
-        <i class="ri-arrow-right-down-line"></i>
-        <h6>IDENTIDAD CORPORATIVA</h6>
-        <p>Diseño de identidad visual completa para startup tecnológica...</p>
-    </div>
-</a>
-
-
-<a data-aos="fade-left" data-aos-duration="2000" href="proyecto1.html" class="gallery-item">
-
-    <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/HA.jpg?updatedAt=1763492122200" alt="">
-
-    <div class="gallery-overlay">
-        <i class="ri-arrow-right-down-line"></i>
-        <h6>HA BASKET </h6>
-        <p>Diseño de identidad visual completa para startup tecnológica...</p>
-    </div>
-</a>
-
-
-    </section>
-
+          <div class="gallery-overlay">
+            <i class="ri-arrow-right-down-line"></i>
+            <h6>IDENTIDAD <br />DE MARCA</h6>
+            <p>
+              Nueva identidad visual para Kaotiko, orientada a modernizar la
+              marca.
+            </p>
+          </div>
+        </a>
+      </section>
     </main>
-    
 
-    <footer data-aos="fade-up"  data-aos-anchor-placement="top-bottom" data-aos-duration="1500"id="contacto">
-        <h2>CONTACTO</h2>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_HorizontalBlano.svg?updatedAt=1760980637733" alt="">
-            </div>
-            <div class="social-links">
-                <a href="#instagram">INSTAGRAM</a>
-                <a href="#linkedin">LINKEDIN</a>
-                <a href="#behance">BEHANCE</a>
-            </div>
+    <footer
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1500"
+      id="contacto"
+    >
+      <h2>CONTACTO</h2>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_HorizontalBlano.svg?updatedAt=1760980637733"
+            alt=""
+          />
         </div>
+        <div class="social-links">
+          <a href="#instagram">INSTAGRAM</a>
+          <a href="#linkedin">LINKEDIN</a>
+          <a href="#behance">BEHANCE</a>
+        </div>
+      </div>
     </footer>
 
-
-  <script src="js/script.js"></script>
-  <script>
-  AOS.init();
-  </script>
-</body> 
+    <script src="js/script.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
