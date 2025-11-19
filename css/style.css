@@ -336,6 +336,47 @@ nav a:hover {
   transform: translateY(0);
 }
 
+.botones {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem 4rem;
+}
+
+.boton-default {
+  text-decoration: none;
+  display: inline-flex;
+  font-size: 2rem;
+  font-family: Casper-M;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  align-items: center;
+}
+
+.boton-default i {
+  margin-left: 0.5rem;
+  font-size: 3rem;
+}
+
+.boton-default span {
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.boton-default:hover span {
+  transform: translateX(-80px);
+  opacity: 0.6;
+}
+
+.boton-default i {
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.boton-default:hover i {
+  transform: translateX(-40px);
+  opacity: 0.6;
+}
+
 footer {
   padding: 6rem 4rem 4rem;
   margin-top: 4rem;
