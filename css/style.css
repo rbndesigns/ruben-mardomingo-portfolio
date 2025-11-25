@@ -340,6 +340,8 @@ nav a:hover {
   display: flex;
   justify-content: flex-end;
   padding: 2rem 4rem;
+  overflow: visible;
+  position: relative;
 }
 
 .boton-default {

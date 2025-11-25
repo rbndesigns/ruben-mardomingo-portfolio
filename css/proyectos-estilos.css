@@ -1,0 +1,229 @@
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 0 4rem 4rem;
+  margin: 0 auto;
+}
+
+.project-gallery .gallery-item {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  aspect-ratio: 16/9; /* Cinematic ratio for project details */
+  width: 100% !important;
+}
+
+.project-gallery .gallery-item.full-width {
+  grid-column: 1 / -1 !important;
+  aspect-ratio: 21/9;
+}
+
+.project-gallery .gallery-item.vertical {
+  aspect-ratio: 3/4;
+}
+
+/* Content Layouts */
+.project-header {
+  padding: 8rem 4rem 2rem;
+  text-align: left;
+}
+
+.project-header h1 {
+  font-family: Casper-M;
+  font-size: 5vw;
+  line-height: 0.9;
+  margin-bottom: 1rem;
+}
+
+.project-header h2 {
+  font-family: Casper-L;
+  font-size: 2vw;
+  color: #aaa;
+  letter-spacing: 0.1em;
+}
+
+.project-hero-img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  padding: 0 4rem;
+  margin-bottom: 6rem;
+}
+
+.content-block {
+  padding: 4rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.content-block h3 {
+  font-family: Casper-M;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.content-block p,
+.content-block ul {
+  font-family: Satoshi-R;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.content-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-block ul li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Visual System Swatches */
+.swatches {
+  display: flex;
+  gap: 20px;
+  margin-top: 2rem;
+}
+.swatch {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+/* Typography Preview */
+.typo-preview {
+  font-size: 3rem;
+  line-height: 1.2;
+  border-top: 1px solid #fff;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1152px) {
+  .content-block {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+  .project-header h1 {
+    font-size: 3rem;
+  }
+  .project-header h2 {
+    font-size: 1.2rem;
+  }
+  .project-hero-img {
+    padding: 0 2rem;
+    height: 50vh;
+  }
+}
+
+/* --- START OF NEW GALLERY STYLES --- */
+
+.scrolling-gallery-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #0c0a0a00;
+  /* Adjust height as needed, matches the previous video aspect */
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient Masks to fade edges (optional, adds polish) */
+.scrolling-gallery-container::before,
+.scrolling-gallery-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scrolling-gallery-container::before {
+  left: 0;
+  background: linear-gradient(to right, #0c0a0a 0%, transparent 100%);
+}
+
+.scrolling-gallery-container::after {
+  right: 0;
+  background: linear-gradient(to left, #0c0a0a 0%, transparent 100%);
+}
+
+.scrolling-track {
+  display: flex;
+  gap: 10px; /* Space between images */
+  /* Calculate width based on number of distinct images. 
+     If you have 4 images, and duplicate them once for the loop = 8 images. 
+     Animation moves exactly 50% to create the illusion of infinity. 
+  */
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* INTERACTION: Pause on Hover */
+.scrolling-gallery-container:hover .scrolling-track {
+  animation-play-state: paused;
+}
+
+.scrolling-item {
+  width: 400px; /* Fixed width for consistency */
+  height: 450px;
+  flex-shrink: 0;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.scrolling-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Grayscale to Color on hover effect */
+  filter: grayscale(100%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.scrolling-gallery-container:hover .scrolling-item img {
+  filter: grayscale(0%); /* Show color when hovering the container */
+}
+
+/* Optional: Slight zoom on specific image hover */
+.scrolling-item:hover img {
+  transform: scale(1.03);
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move left by 50% of the track width (assuming content is duplicated exactly once) */
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .scrolling-gallery-container {
+    height: 350px;
+  }
+  .scrolling-item {
+    width: 250px;
+    height: 300px;
+  }
+}
+/* --- END OF NEW GALLERY STYLES --- */
