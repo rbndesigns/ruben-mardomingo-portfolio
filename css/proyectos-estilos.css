@@ -226,4 +226,400 @@
     height: 300px;
   }
 }
-/* --- END OF NEW GALLERY STYLES --- */
+
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+
+/* ============================================
+   SECCIÓN PROYECTO DETALLE
+   Añade este código al final de tu style.css
+   ============================================ */
+
+.proyecto-detalle {
+  padding: 8rem 4rem 4rem;
+  max-width: 100%;
+}
+
+.proyecto-header {
+  margin-bottom: 4rem;
+}
+
+.proyecto-header h1 {
+  font-family: Casper-M;
+  font-size: 5rem;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.proyecto-header p {
+  font-family: Satoshi-R;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+/* Grid Layout - Replica exacta de la imagen */
+.proyecto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.proyecto-item {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.proyecto-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.proyecto-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Imagen hero - Primera fila completa */
+.proyecto-hero {
+  grid-column: 1 / 4;
+  aspect-ratio: 16 / 9;
+}
+
+/* Segunda fila - Dos imágenes medianas CON LA MISMA PROPORCIÓN */
+.proyecto-medio-1 {
+  grid-column: 1 / 2;
+  aspect-ratio: 1;
+}
+
+.proyecto-medio-2 {
+  grid-column: 2 / 4;
+  aspect-ratio: 2 / 1; /* Ahora ocupa 2 columnas pero mantiene proporción */
+}
+
+/* Tercera fila - Tres imágenes pequeñas MÁS GRANDES y con CONTAIN */
+.proyecto-small-1,
+.proyecto-small-2,
+.proyecto-small-3 {
+  aspect-ratio: 9 / 12; /* Más grandes: cambiado de 1:1 a 4:3 */
+}
+
+.proyecto-small-1 img,
+.proyecto-small-2 img,
+.proyecto-small-3 img {
+  object-fit: contain; /* Cambiado de cover a contain */
+}
+
+.proyecto-small-1 {
+  grid-column: 1 / 2;
+}
+
+.proyecto-small-2 {
+  grid-column: 2 / 3;
+}
+
+.proyecto-small-3 {
+  grid-column: 3 / 4;
+}
+
+/* Última fila - Dos imágenes CON LA MISMA PROPORCIÓN */
+.proyecto-footer-1 {
+  grid-column: 1 / 2;
+  aspect-ratio: 1; /* Ahora ambas son cuadradas */
+}
+
+.proyecto-footer-2 {
+  grid-column: 2 / 4;
+  aspect-ratio: 2 / 1; /* Ocupa 2 columnas, mantiene proporción con footer-1 */
+}
+
+/* ============================================
+   RESPONSIVIDAD
+   ============================================ */
+
+/* Tablets (max-width: 1152px) */
+@media (max-width: 1152px) {
+  .proyecto-detalle {
+    padding: 6rem 2rem 3rem;
+  }
+
+  .proyecto-header h1 {
+    font-size: 3.5rem;
+  }
+
+  .proyecto-header p {
+    font-size: 1rem;
+  }
+
+  .proyecto-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  /* Reajuste para tablet */
+  .proyecto-hero {
+    grid-column: 1 / 3;
+  }
+
+  .proyecto-medio-1 {
+    grid-column: 1 / 2;
+    aspect-ratio: 1;
+  }
+
+  .proyecto-medio-2 {
+    grid-column: 2 / 3;
+    aspect-ratio: 1;
+  }
+
+  .proyecto-small-1 {
+    grid-column: 1 / 2;
+    aspect-ratio: 4 / 3;
+  }
+
+  .proyecto-small-2 {
+    grid-column: 2 / 3;
+    aspect-ratio: 4 / 3;
+  }
+
+  .proyecto-small-3 {
+    grid-column: 1 / 3;
+    aspect-ratio: 4 / 3;
+  }
+
+  .proyecto-footer-1 {
+    grid-column: 1 / 2;
+    aspect-ratio: 1;
+  }
+
+  .proyecto-footer-2 {
+    grid-column: 2 / 3;
+    aspect-ratio: 1;
+  }
+}
+
+/* Móviles (max-width: 770px) */
+@media (max-width: 770px) {
+  .proyecto-detalle {
+    padding: 5rem 1.5rem 2rem;
+  }
+
+  .proyecto-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .proyecto-header p {
+    font-size: 0.9rem;
+  }
+
+  .proyecto-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Todo en una columna en móvil */
+  .proyecto-hero,
+  .proyecto-medio-1,
+  .proyecto-medio-2,
+  .proyecto-footer-1,
+  .proyecto-footer-2 {
+    grid-column: 1;
+    aspect-ratio: 1;
+  }
+
+  /* La imagen hero más ancha en móvil */
+  .proyecto-hero {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Imágenes pequeñas mantienen su proporción en móvil */
+  .proyecto-small-1,
+  .proyecto-small-2,
+  .proyecto-small-3 {
+    grid-column: 1;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////// */
+
+/* --- ESTILOS PÁGINA DE PROYECTO (MILBONA) --- */
+
+/* Cabecera del proyecto */
+.project-header {
+  padding: 2rem 4rem 3rem; /* Coherente con tu padding header */
+  margin-top: 2rem;
+}
+
+.project-info h2 {
+  font-family: "Casper-M", sans-serif;
+  font-size: 4rem; /* Grande e impactante */
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.project-info h3 {
+  font-family: "Satoshi-R", sans-serif; /* Tu fuente secundaria */
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #999; /* Un gris suave para jerarquía */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Sistema Grid del Proyecto */
+.project-grid {
+  display: grid;
+  /* Usamos 6 columnas para máxima flexibilidad (1, 2 y 3 columnas) */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px; /* Mismo gap que tu .gallery */
+  padding: 0 4rem 4rem; /* Alineado con el resto de la web */
+  width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.grid-item.third img {
+  object-fit: contain;
+}
+
+/* Efecto hover sutil (igual que tu home) */
+.grid-item:hover img {
+  transform: scale(1.03);
+}
+
+/* --- CLASES DE TAMAÑO (Para replicar la foto) --- */
+
+/* Fila 1: Full width */
+.full {
+  grid-column: span 6;
+  aspect-ratio: 16/9; /* Formato panorámico */
+}
+
+/* Fila 2: Mitad vertical (retratos altos) */
+.half-vertical {
+  grid-column: span 3;
+  aspect-ratio: 3/4; /* Formato retrato */
+}
+
+/* Fila 3: Tercios (retratos) */
+.third {
+  grid-column: span 2;
+  aspect-ratio: 3/4.5; /* Un poco más altos */
+}
+
+/* Fila 4: Mitad horizontal (paisaje) */
+.half-horizontal {
+  grid-column: span 3;
+  aspect-ratio: 4/3; /* Formato clásico */
+}
+
+/* --- RESPONSIVE --- */
+
+/* Tablet (Coincide con tu breakpoint de 1152px) */
+@media (max-width: 1152px) {
+  .project-header,
+  .project-grid {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .project-info h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Móvil (Coincide con tu breakpoint de 770px) */
+@media (max-width: 770px) {
+  .project-header,
+  .project-grid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* Colapsar todo a 1 columna */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Resetear los spans para que ocupen todo el ancho */
+  .full,
+  .half-vertical,
+  .third,
+  .half-horizontal {
+    grid-column: span 1;
+    /* Ajustamos aspect-ratios para móvil para que no sean enormes */
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  /* Opcional: Dar una altura mínima a las imágenes en móvil */
+  .grid-item img {
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  .project-info h2 {
+    font-size: 2.2rem;
+  }
+
+  .project-info h3 {
+    font-size: 0.9rem;
+  }
+}
