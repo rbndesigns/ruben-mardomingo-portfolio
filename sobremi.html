@@ -1,260 +1,245 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre Mí - Ruben M</title>
-    
+
     <!-- Tu hoja de estilos principal (Asegúrate de haber pegado aquí el CSS nuevo) -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <link rel="icon" type="image/png" href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg" sizes="128x128"/>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg"
+      sizes="128x128"
+    />
 
     <!-- Remix Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"/>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <!-- GSAP Core & ScrollTrigger (Vitales para las animaciones) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
+  </head>
 
-<body class="about-body">
-    
+  <body class="about-body">
     <!-- Fondo animado -->
     <div class="bg"></div>
 
     <!-- CABECERA -->
     <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728" alt="Logo">
-            </a>
-        </div>
-        
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728"
+            alt="Logo"
+          />
+        </a>
+      </div>
 
-        <nav id="nav">
-            <a href="index.html">HOME</a>
-            <a href="proyectos.html">PROYECTOS</a>
-            <!-- Estilo inline para marcar la página activa -->
-            <a href="sobre-mi.html" style="border-bottom: 1px solid #fff; opacity: 1;">SOBRE MÍ</a>
-            <a href="#contacto">CONTACTO</a>
-        </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
 
-        <div class="icono-derecha">
-            <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768" alt="">
-        </div>
+      <nav id="nav">
+        <a href="index.html">HOME</a>
+        <a href="proyectos.html">PROYECTOS</a>
+        <a href="sobremi.html">SOBRE MÍ</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <div class="icono-derecha">
+        <img
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768"
+          alt=""
+        />
+      </div>
     </header>
 
     <main>
-        
-        <!-- 1. HERO DINÁMICO (Parallax + Texto Gigante) -->
-        <section class="about-hero-dynamic">
-            <div class="hero-overlay-text">
-                <!-- Este texto se anima con GSAP -->
-                <h1 class="reveal-text">VISUAL<br>ALCHEMIST</h1>
+      <!-- 3. SCROLL HORIZONTAL (Línea de tiempo) -->
+      <!-- Este contenedor se "fijará" en pantalla mientras se mueve lateralmente -->
+      <section class="scroll-container">
+        <div class="horizontal-scroll-wrapper">
+          <!-- Panel Intro -->
+          <div class="panel intro-panel">
+            <div>
+              <h2>MI <br />EVOLUCIÓN</h2>
+              <p>
+                Desliza para viajar en el tiempo
+                <i class="ri-arrow-right-line"></i>
+              </p>
             </div>
-            
-            <div class="hero-image-container parallax-img">
-                <!-- FOTO DE PORTADA -->
-                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop" alt="Ruben M">
+          </div>
+
+          <!-- Panel 1: Origen -->
+          <div class="panel">
+            <div class="panel-content">
+              <span class="year">2022</span>
+              <div class="panel-img">
+                <img
+                  src="https://ik.imagekit.io/jzanz3klfl/portfolio/Sobre%20Mi/TrayectoriaUdit.jpg"
+                />
+              </div>
+              <h3>EMPIEZO LA UNIVERSIDAD</h3>
+              <p>
+                Lo que empezó como curiosidad, hoy es mi día a día en cuarto
+                curso. Aún me quedan asignaturas, pero mi cabeza ya ha hecho el
+                clic: he pasado de mirar a observar como diseñador.
+              </p>
             </div>
-            
-            <div class="hero-intro-text">
-                <p>No soy solo un diseñador.</p>
-                <p>Soy el puente entre lo que tu marca es <br>y lo que el mundo ve.</p>
+          </div>
+
+          <!-- Panel 2: Universidad -->
+          <div class="panel">
+            <div class="panel-content">
+              <span class="year">2024</span>
+              <div class="panel-img">
+                <img
+                  src="https://ik.imagekit.io/jzanz3klfl/portfolio/Sobre%20Mi/TrayectoriaIH.jpg"
+                  alt="Universidad"
+                />
+              </div>
+              <h3>PRÁCTICAS ILUNION HOTELS</h3>
+              <p>
+                El primer choque con la realidad fuera del aula. Aprendí que
+                diseñar no es solo que quede bonito, sino respetar una marca,
+                cumplir plazos y solucionar problemas reales.
+              </p>
             </div>
-        </section>
+          </div>
 
-        <!-- 2. MARQUEE INFINITO (Cinta de texto) -->
-        <section class="marquee-section">
-            <div class="marquee-content">
-                <!-- El texto se repite para crear el loop infinito -->
-                <span>STRATEGY — BRANDING — ART DIRECTION — UI/UX — STORYTELLING — MOTION — </span>
-                <span>STRATEGY — BRANDING — ART DIRECTION — UI/UX — STORYTELLING — MOTION — </span>
+          <!-- Panel 3: Actualidad -->
+          <div class="panel">
+            <div class="panel-content">
+              <span class="year">2026</span>
+              <div class="panel-img">
+                <img
+                  src="https://ik.imagekit.io/jzanz3klfl/portfolio/Sobre%20Mi/TrayectoriaRM.jpg"
+                />
+              </div>
+              <h3>BUSCANDO NUEVOS RETOS</h3>
+              <p>
+                Con el título casi en la mano, tengo energía de sobra para
+                empezar ya. Busco un equipo donde seguir creciendo y aportar
+                frescura mientras remato mi etapa académica.
+              </p>
             </div>
-        </section>
+          </div>
 
-        <!-- 3. SCROLL HORIZONTAL (Línea de tiempo) -->
-        <!-- Este contenedor se "fijará" en pantalla mientras se mueve lateralmente -->
-        <section class="scroll-container">
-            <div class="horizontal-scroll-wrapper">
-                
-                <!-- Panel Intro -->
-                <div class="panel intro-panel">
-                    <div>
-                        <h2>LA<br>EVOLUCIÓN</h2>
-                        <p>Desliza para viajar en el tiempo <i class="ri-arrow-right-line"></i></p>
-                    </div>
-                </div>
-
-                <!-- Panel 1: Origen -->
-                <div class="panel">
-                    <div class="panel-content">
-                        <span class="year">2018</span>
-                        <div class="panel-img">
-                            <img src="https://images.unsplash.com/photo-1626785774573-4b7993143a2d?q=80&w=600&auto=format&fit=crop" alt="Inicios">
-                        </div>
-                        <h3>EL CAOS CREATIVO</h3>
-                        <p>Rompí con lo académico. Experimentación pura, texturas y el descubrimiento del diseño como lenguaje visual.</p>
-                    </div>
-                </div>
-
-                <!-- Panel 2: Universidad -->
-                <div class="panel">
-                    <div class="panel-content">
-                        <span class="year">2022</span>
-                        <div class="panel-img">
-                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=600&auto=format&fit=crop" alt="Universidad">
-                        </div>
-                        <h3>LA TÉCNICA</h3>
-                        <p>Domar la creatividad. Aprendí que la retícula es libertad y que la tipografía es la voz de la marca.</p>
-                    </div>
-                </div>
-
-                <!-- Panel 3: Actualidad -->
-                <div class="panel">
-                    <div class="panel-content">
-                        <span class="year">2026</span>
-                        <div class="panel-img">
-                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=600&auto=format&fit=crop" alt="Futuro">
-                        </div>
-                        <h3>VISIÓN 360º</h3>
-                        <p>Hoy construyo sistemas visuales escalables. De la estrategia al pixel final. Listo para el siguiente gran reto.</p>
-                    </div>
-                </div>
-
-                <!-- Panel Final -->
-                <div class="panel end-panel">
-                    <div style="text-align:center;">
-                         <h2>¿TU TURNO?</h2>
-                         <p style="color:#888; margin-top:1rem;">Sigamos creando.</p>
-                    </div>
-
-                    
-                </div>
-
+          <!-- Panel Final -->
+          <div class="panel end-panel">
+            <div style="text-align: center">
+              <section class="botones">
+                <a class="boton-default" href="contacto.html">
+                  <span>¿TU TURNO?</span>
+                  <i class="ri-arrow-right-down-line"></i>
+                </a>
+              </section>
+              <p style="color: #888; margin-top: 1rem">
+                Sigamos creando. Contáctame con un click.
+              </p>
             </div>
-        </section>
-
-        <!-- 4. MANIFIESTO + VIDEO -->
-        <section class="manifesto-grid">
-            <div class="manifesto-txt">
-                <h3>MI FILOSOFÍA</h3>
-                <p>El "buen diseño" es invisible. Solo notas el diseño cuando falla o cuando te emociona. Yo trabajo obsesivamente para lograr lo segundo, eliminando el ruido para que el mensaje brille.</p>
-                <br>
-                <ul class="stats-list">
-                    <li><span>+5</span> AÑOS EXPERIENCIA</li>
-                    <li><span>∞</span> CAFÉS BEBIDOS</li>
-                    <li><span>100%</span> PIXEL PERFECT</li>
-                </ul>
-            </div>
-            
-            <div class="manifesto-visual">
-                <!-- Usando uno de tus videos existentes como textura visual -->
-                <video autoplay loop muted playsinline>
-                    <source src="https://ik.imagekit.io/jzanz3klfl/portfolio/OlvanaVideo?updatedAt=1763497444512" type="video/mp4">
-                </video>
-            </div>
-        </section>
-
-        <!-- Botón volver -->
-        <section class="botones">
-            <a class="boton-default" href="proyectos.html">
-                <span>VER TRABAJOS</span> <i class="ri-arrow-right-up-line"></i>
-            </a>
-        </section>
-
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- FOOTER -->
     <footer id="contacto">
-        <h2>CONTACTO</h2>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_HorizontalBlano.svg?updatedAt=1760980637733" alt="">
-            </div>
-            <div class="social-links">
-                <a href="#instagram">INSTAGRAM</a>
-                <a href="#linkedin">LINKEDIN</a>
-                <a href="#behance">BEHANCE</a>
-            </div>
+      <h2>CONTACTO</h2>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_HorizontalBlano.svg?updatedAt=1760980637733"
+            alt=""
+          />
         </div>
+        <div class="social-links">
+          <a href="#instagram">INSTAGRAM</a>
+          <a href="#linkedin">LINKEDIN</a>
+          <a href="#behance">BEHANCE</a>
+        </div>
+      </div>
     </footer>
 
     <!-- LOGICA DE ANIMACIONES GSAP -->
     <script>
-        // 1. Registrar Plugin
-        gsap.registerPlugin(ScrollTrigger);
+      // 1. Registrar Plugin
+      gsap.registerPlugin(ScrollTrigger);
 
-        // 2. Animación Entrada Hero (Texto sube y aparece)
-        gsap.from(".reveal-text", {
-            y: 100,
-            opacity: 0,
-            duration: 1.5,
-            ease: "power4.out",
-            delay: 0.2
+      // 2. Animación Entrada Hero (Texto sube y aparece)
+      gsap.from(".reveal-text", {
+        y: 100,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power4.out",
+        delay: 0.2,
+      });
+
+      gsap.from(".hero-intro-text", {
+        opacity: 0,
+        x: -50,
+        duration: 1.5,
+        delay: 0.8,
+      });
+
+      // 3. Parallax en imagen principal
+      gsap.to(".parallax-img img", {
+        yPercent: 20, // La imagen se mueve verticalmente más lento que el scroll
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".about-hero-dynamic",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+
+      // 4. SCROLL HORIZONTAL (Desktop)
+      // Solo activamos esto si la pantalla es ancha (PC/Laptop)
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1025px)", () => {
+        let sections = gsap.utils.toArray(".panel");
+
+        gsap.to(sections, {
+          xPercent: -100 * (sections.length - 1), // Mueve todos los paneles a la izquierda
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".scroll-container",
+            pin: true, // Deja fija la sección en pantalla
+            scrub: 1, // Suaviza la animación
+            snap: 1 / (sections.length - 1), // Hace que se detenga "imantado" en cada panel
+            end: "+=3500", // Longitud del scroll vertical necesaria para recorrer todo
+          },
+        });
+      });
+
+      // 5. Menú Hamburguesa (Tu código original)
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("nav");
+
+      if (hamburger) {
+        hamburger.addEventListener("click", () => {
+          nav.classList.toggle("active");
         });
 
-        gsap.from(".hero-intro-text", {
-            opacity: 0,
-            x: -50,
-            duration: 1.5,
-            delay: 0.8
+        // Cerrar menú al hacer click fuera o en enlace
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => nav.classList.remove("active"));
         });
-
-        // 3. Parallax en imagen principal
-        gsap.to(".parallax-img img", {
-            yPercent: 20, // La imagen se mueve verticalmente más lento que el scroll
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".about-hero-dynamic",
-                start: "top top",
-                end: "bottom top",
-                scrub: true
-            }
-        });
-
-        // 4. SCROLL HORIZONTAL (Desktop)
-        // Solo activamos esto si la pantalla es ancha (PC/Laptop)
-        let mm = gsap.matchMedia();
-
-        mm.add("(min-width: 1025px)", () => {
-            let sections = gsap.utils.toArray(".panel");
-            
-            gsap.to(sections, {
-                xPercent: -100 * (sections.length - 1), // Mueve todos los paneles a la izquierda
-                ease: "none",
-                scrollTrigger: {
-                    trigger: ".scroll-container",
-                    pin: true,     // Deja fija la sección en pantalla
-                    scrub: 1,      // Suaviza la animación
-                    snap: 1 / (sections.length - 1), // Hace que se detenga "imantado" en cada panel
-                    end: "+=3500", // Longitud del scroll vertical necesaria para recorrer todo
-                }
-            });
-        });
-
-        // 5. Menú Hamburguesa (Tu código original)
-        const hamburger = document.getElementById('hamburger');
-        const nav = document.getElementById('nav');
-
-        if(hamburger){
-            hamburger.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-            
-            // Cerrar menú al hacer click fuera o en enlace
-            nav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => nav.classList.remove('active'));
-            });
-        }
-
+      }
     </script>
-</body>
+  </body>
 </html>
