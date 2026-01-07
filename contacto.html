@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Ruben M</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contacto-estilos.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg"
+      sizes="128x128"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+
+  <body class="contact-body">
+    <!-- FONDO DE RUIDO (El mismo que en index.html) -->
+    <div class="bg"></div>
+
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728"
+            alt="Logo"
+          />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">HOME</a>
+        <a href="proyectos.html">PROYECTOS</a>
+        <a href="sobremi.html">SOBRE MÍ</a>
+        <a href="contacto.html" class="active-link">CONTACTO</a>
+      </nav>
+
+      <div class="icono-derecha">
+        <img
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <main class="contact-main">
+      <section class="contact-hero">
+        <!-- Título Gigante -->
+        <div class="hero-title parallax-el" data-speed="0.02">
+          <h1>HABLE<br />MOS.</h1>
+        </div>
+
+        <!-- Intro y CTA -->
+        <div class="hero-intro parallax-el" data-speed="0.01">
+          <p>
+            ¿Tienes una idea que necesita dirección visual? <br />
+            Hagamos que suceda.
+          </p>
+
+          <div class="magnetic-wrap">
+            <button id="open-modal-btn" class="magnetic-btn">
+              <span>INICIAR PROYECTO</span>
+              <i class="ri-arrow-right-up-line"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Email Flotante -->
+        <div class="info-card email-card parallax-el" data-speed="0.03">
+          <span class="label">MAIL</span>
+          <a href="mailto:hola@rubenm.com" class="glitch-hover"
+            >hola@rubenm.com</a
+          >
+        </div>
+
+        <!-- Redes Flotantes -->
+        <div class="info-card social-card parallax-el" data-speed="0.04">
+          <span class="label">SOCIAL</span>
+          <div class="social-row">
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+            <a href="#"><i class="ri-behance-fill"></i></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL POP-UP -->
+    <div class="modal-overlay" id="contact-modal">
+      <div class="modal-content">
+        <button class="close-modal" id="close-modal-btn">
+          <i class="ri-close-line"></i>
+        </button>
+
+        <div class="modal-header">
+          <h2>CONTACTO</h2>
+          <p>Cuéntame brevemente sobre tu proyecto.</p>
+        </div>
+
+        <form class="minimal-form">
+          <div class="form-group">
+            <input type="text" required placeholder=" " id="name" />
+            <label for="name">Nombre</label>
+          </div>
+          <div class="form-group">
+            <input type="email" required placeholder=" " id="email" />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-group">
+            <textarea required placeholder=" " id="message" rows="1"></textarea>
+            <label for="message">Mensaje</label>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            ENVIAR MENSAJE <i class="ri-send-plane-fill"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/contacto.js"></script>
+  </body>
+</html>
