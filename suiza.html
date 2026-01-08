@@ -1,0 +1,180 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milbona - Ruben M</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/proyectos-estilos.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg"
+      sizes="128x128"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Fondo Animado de Ruido -->
+    <div class="bg"></div>
+
+    <header data-aos="fade-down" data-aos-duration="2000">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728"
+            alt="Ruben M Logo"
+          />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">HOME</a>
+        <a href="proyectos.html">PROYECTOS</a>
+        <a href="index.html#sobre">SOBRE MÍ</a>
+        <a href="#contacto">CONTACTO</a>
+      </nav>
+
+      <div class="icono-derecha">
+        <img
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="project-header"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <div class="project-info">
+          <h2>SUIZA WEBSITE</h2>
+          <h3>CREACIÓN PÁGINA WEB INTERACTIVA · DESARROLLO FRONT END</h3>
+        </div>
+      </section>
+
+      <!-- IFRAME SECTION -->
+      <section
+        class="iframe-container"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <div class="iframe-title"></div>
+        <div class="iframe-wrapper bg-white">
+          <iframe
+            src="https://rbndesigns.github.io/suiza-web/"
+            title="Suiza Web Project"
+            loading="lazy"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- 2. RESUMEN / CHAPEAU -->
+      <section class="content-block" data-aos="fade-up">
+        <div class="text-left">
+          <h3>ESTRATEGIA VISUAL</h3>
+        </div>
+        <div class="text-right">
+          <p>
+            El objetivo fue diseñar una web sobre Suiza que se alejara de los
+            portales turísticos convencionales, apostando por una estética
+            minimalista y contemporánea inspirada en el diseño suizo. La
+            estrategia visual prioriza la claridad, la jerarquía tipográfica y
+            el uso del espacio en blanco para construir una experiencia ordenada
+            y funcional, donde cada elemento cumple un propósito concreto. A
+            través de una navegación modular, interacciones sutiles y una
+            cuidada selección de imágenes y video, la web transmite los valores
+            de precisión, equilibrio y calidad asociados a la identidad del
+            país.
+          </p>
+          <br />
+          <ul>
+            <li>
+              <span>Target</span>
+              <span
+                >Diseñadores gráficos, Arquitectos & Estudiantes de diseño</span
+              >
+            </li>
+            <li>
+              <span>Concepto</span>
+              <span>Minimalismo suizo aplicado a una experiencia web.</span>
+            </li>
+            <li>
+              <span>Rol</span>
+              <span>Diseño UI, Wireframing & Diseño de interacción</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="botones">
+        <a class="boton-default" href="proyectos.html">
+          <span>PROYECTOS</span> <i class="ri-arrow-right-down-line"></i>
+        </a>
+      </section>
+    </main>
+
+    <footer
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom"
+      data-aos-duration="1500"
+      id="contacto"
+    >
+      <h2>CONTACTO</h2>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_HorizontalBlano.svg?updatedAt=1760980637733"
+            alt=""
+          />
+        </div>
+        <div class="social-links">
+          <a target="_blank" href="https://www.instagram.com/rbn.designs/"
+            >INSTAGRAM</a
+          >
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/rub%C3%A9n-mardomingo-dom%C3%ADnguez-353567361/"
+            >LINKEDIN</a
+          >
+          <a target="_blank" href="#behance">BEHANCE</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
