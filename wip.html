@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work in Progress - Ruben M</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg"
+      sizes="128x128"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+
+    <style>
+      .wip-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .wip-icon {
+        font-size: 8rem;
+        margin-bottom: 2rem;
+        animation: rotate 3s linear infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .wip-title {
+        font-family: "Casper-M", sans-serif;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+      }
+
+      .wip-subtitle {
+        font-family: "Satoshi-R", sans-serif;
+        font-size: 1.5rem;
+        color: #999;
+        margin-bottom: 0.5rem;
+      }
+
+      .wip-message {
+        font-family: "Satoshi-R", sans-serif;
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 3rem;
+        max-width: 600px;
+        line-height: 1.6;
+      }
+
+      .wip-message strong {
+        color: #fff;
+      }
+
+      .wip-divider {
+        width: 100px;
+        height: 2px;
+        background: #333;
+        margin: 3rem auto;
+      }
+
+      .wip-suggestions {
+        margin-bottom: 3rem;
+      }
+
+      .wip-suggestions h3 {
+        font-family: "Casper-M", sans-serif;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.1em;
+        color: #999;
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto 3rem;
+      }
+
+      .project-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid #333;
+        padding: 2rem;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .project-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.05),
+          transparent
+        );
+        transition: left 0.5s ease;
+      }
+
+      .project-card:hover::before {
+        left: 100%;
+      }
+
+      .project-card:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: #fff;
+        transform: translateY(-5px);
+      }
+
+      .project-card h4 {
+        font-family: "Casper-M", sans-serif;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.05em;
+      }
+
+      .project-card p {
+        font-family: "Satoshi-R", sans-serif;
+        font-size: 0.9rem;
+        color: #888;
+        margin-bottom: 1rem;
+      }
+
+      .project-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: "Casper-L", sans-serif;
+        font-size: 0.8rem;
+        color: #4caf50;
+        letter-spacing: 0.1em;
+      }
+
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        background: #4caf50;
+        border-radius: 50%;
+        animation: pulse 2s ease infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
+
+      .wip-actions {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .wip-btn {
+        font-family: "Casper-M", sans-serif;
+        font-size: 1.2rem;
+        padding: 1.5rem 3rem;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .wip-btn:hover {
+        background: #fff;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      .wip-btn.primary {
+        background: #fff;
+        color: #000;
+      }
+
+      .wip-btn.primary:hover {
+        background: transparent;
+        color: #fff;
+      }
+
+      @media (max-width: 770px) {
+        .wip-icon {
+          font-size: 5rem;
+        }
+
+        .wip-title {
+          font-size: 2.5rem;
+        }
+
+        .wip-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .wip-message {
+          font-size: 1rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .wip-actions {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .wip-btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Fondo Animado de Ruido -->
+    <div class="bg"></div>
+
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728"
+            alt="Logo"
+          />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">HOME</a>
+        <a href="proyectos.html">PROYECTOS</a>
+        <a href="sobremi.html">SOBRE MÍ</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <div class="icono-derecha">
+        <img
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <main class="wip-container">
+      <div class="wip-icon">
+        <i class="ri-tools-line"></i>
+      </div>
+
+      <h1 class="wip-title">WORK IN PROGRESS</h1>
+      <p class="wip-subtitle">Este proyecto aún está en desarrollo</p>
+
+      <p class="wip-message">
+        Estoy puliendo cada detalle para que la presentación esté a la altura.
+        <strong>Mientras tanto</strong>, te invito a explorar otros proyectos
+        que ya están listos y documentados. ¡Gracias por tu paciencia! 🚀
+      </p>
+
+      <div class="wip-actions">
+        <a href="proyectos.html" class="wip-btn primary">
+          <span>VER TODOS LOS PROYECTOS</span>
+          <i class="ri-arrow-right-line"></i>
+        </a>
+        <a href="index.html" class="wip-btn">
+          <i class="ri-arrow-left-line"></i>
+          <span>VOLVER AL INICIO</span>
+        </a>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

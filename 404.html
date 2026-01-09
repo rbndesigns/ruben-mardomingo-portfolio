@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Página no encontrada</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg"
+      sizes="128x128"
+    />
+
+    <!-- Remix Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+
+    <style>
+      /* CSS mínimo inline para la página 404 */
+      .error-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .error-number {
+        font-family: "Casper-M", sans-serif;
+        font-size: 15vw;
+        line-height: 1;
+        margin-bottom: 2rem;
+        color: transparent;
+        -webkit-text-stroke: 2px #fff;
+        text-stroke: 2px #fff;
+        letter-spacing: 0.05em;
+      }
+
+      .error-title {
+        font-family: "Casper-M", sans-serif;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.05em;
+      }
+
+      .error-message {
+        font-family: "Satoshi-R", sans-serif;
+        font-size: 1.3rem;
+        color: #999;
+        margin-bottom: 3rem;
+        max-width: 500px;
+      }
+
+      .error-actions {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .error-btn {
+        font-family: "Casper-M", sans-serif;
+        font-size: 1.2rem;
+        padding: 1.5rem 3rem;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #fff;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .error-btn:hover {
+        background: #fff;
+        color: #000;
+        transform: translateY(-2px);
+      }
+
+      .error-btn i {
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+      }
+
+      .error-btn:hover i {
+        transform: translateX(-5px);
+      }
+
+      @media (max-width: 770px) {
+        .error-number {
+          font-size: 20vw;
+        }
+
+        .error-title {
+          font-size: 2rem;
+        }
+
+        .error-message {
+          font-size: 1.1rem;
+        }
+
+        .error-btn {
+          font-size: 1rem;
+          padding: 1.2rem 2rem;
+        }
+
+        .error-actions {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Fondo Animado de Ruido -->
+    <div class="bg"></div>
+
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728"
+            alt="Logo"
+          />
+        </a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">HOME</a>
+        <a href="proyectos.html">PROYECTOS</a>
+        <a href="sobremi.html">SOBRE MÍ</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <div class="icono-derecha">
+        <img
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768"
+          alt=""
+        />
+      </div>
+    </header>
+
+    <main class="error-container">
+      <div class="error-number">404</div>
+      <h1 class="error-title">PÁGINA NO ENCONTRADA</h1>
+      <p class="error-message">
+        La página que buscas no existe o ha sido movida.
+      </p>
+
+      <div class="error-actions">
+        <a href="index.html" class="error-btn">
+          <i class="ri-arrow-left-line"></i>
+          <span>VOLVER AL INICIO</span>
+        </a>
+        <a href="proyectos.html" class="error-btn">
+          <span>VER PROYECTOS</span>
+          <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
