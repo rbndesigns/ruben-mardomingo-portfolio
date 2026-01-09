@@ -1,0 +1,82 @@
+/* ===================================
+   GRID DE 5 FOTOGRAFÍAS CON ZOOM
+   =================================== */
+
+.photo-series {
+  padding: 4rem;
+  width: 100%;
+  position: relative;
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.series-item {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: visible;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: z-index 0s 0.3s;
+}
+
+.series-item:hover {
+  z-index: 1000;
+  transition: z-index 0s 0s;
+}
+
+.series-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  border-radius: 4px;
+}
+
+/* Efecto HOVER - Imagen grande */
+.series-item:hover img {
+  transform: scale(2);
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+/* Oscurecer el resto al hacer hover */
+.series-grid:has(.series-item:hover) .series-item:not(:hover) {
+  opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 1152px) {
+  .series-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .series-item:hover img {
+    transform: scale(3.5);
+  }
+}
+
+@media (max-width: 770px) {
+  .photo-series {
+    padding: 2rem 1.5rem;
+  }
+
+  .series-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .series-item:hover img {
+    transform: scale(3);
+    padding: 1rem;
+  }
+}
