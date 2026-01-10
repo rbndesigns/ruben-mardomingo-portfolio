@@ -149,3 +149,92 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === modal) closeModal();
   });
 });
+
+// Lógica para enviar el formulario con AJAX (Formspree)
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  const submitBtn = document.getElementById("submit-btn");
+  const originalBtnText = submitBtn.innerHTML;
+
+  if (form) {
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault(); // Evita que la página se recargue
+
+      // Cambiar texto del botón cargando
+      submitBtn.innerHTML = "ENVIANDO...";
+      submitBtn.disabled = true;
+
+      const data = new FormData(event.target);
+
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then((response) => {
+          if (response.ok) {
+            // Éxito
+            status.innerHTML = "¡Mensaje enviado con éxito!";
+            status.style.display = "block";
+            status.style.color = "#4CAF50"; // Verde
+            form.reset(); // Limpiar campos
+
+            // Restaurar botón
+            submitBtn.innerHTML = "ENVIADO <i class='ri-check-line'></i>";
+
+            // Opcional: Cerrar el modal automáticamente después de 2 segundos
+            setTimeout(() => {
+              const modalContent = document.querySelector(".modal-content");
+              const modal = document.getElementById("contact-modal");
+
+              // Usamos tus animaciones de GSAP para cerrar
+              gsap.to(modalContent, {
+                duration: 0.3,
+                y: 50,
+                ease: "power2.in",
+              });
+              gsap.to(modal, {
+                duration: 0.4,
+                autoAlpha: 0,
+                ease: "power2.in",
+                delay: 0.1,
+              });
+
+              // Resetear estado visual del form para la próxima vez
+              setTimeout(() => {
+                status.style.display = "none";
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+              }, 1000);
+            }, 2000);
+          } else {
+            // Error del servidor (ej. spam)
+            response.json().then((data) => {
+              if (Object.hasOwn(data, "errors")) {
+                status.innerHTML = data["errors"]
+                  .map((error) => error["message"])
+                  .join(", ");
+              } else {
+                status.innerHTML = "Hubo un problema al enviar el mensaje.";
+              }
+              status.style.display = "block";
+              status.style.color = "#f44336"; // Rojo
+              submitBtn.innerHTML = originalBtnText;
+              submitBtn.disabled = false;
+            });
+          }
+        })
+        .catch((error) => {
+          // Error de red
+          status.innerHTML = "Error de conexión. Inténtalo de nuevo.";
+          status.style.display = "block";
+          status.style.color = "#f44336";
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+        });
+    });
+  }
+});

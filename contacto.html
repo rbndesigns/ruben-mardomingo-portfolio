@@ -86,7 +86,7 @@
         <div class="info-card email-card parallax-el" data-speed="0.03">
           <span class="label">MAIL</span>
           <a href="mailto:hola@rubenm.com" class="glitch-hover"
-            >hola@rubenm.com</a
+            >rumardominguez@gmail.com</a
           >
         </div>
 
@@ -114,29 +114,60 @@
           <p>Cuéntame brevemente sobre tu proyecto.</p>
         </div>
 
-        <form class="minimal-form">
+        <form
+          class="minimal-form"
+          id="contact-form"
+          action="https://formspree.io/f/mzddpvad"
+          method="POST"
+        >
           <div class="form-group">
-            <input type="text" required placeholder=" " id="name" />
+            <!-- IMPORTANTE: name="name" -->
+            <input type="text" required placeholder=" " id="name" name="name" />
             <label for="name">Nombre</label>
           </div>
           <div class="form-group">
-            <input type="email" required placeholder=" " id="email" />
+            <!-- IMPORTANTE: name="email" -->
+            <input
+              type="email"
+              required
+              placeholder=" "
+              id="email"
+              name="email"
+            />
             <label for="email">Email</label>
           </div>
           <div class="form-group">
-            <textarea required placeholder=" " id="message" rows="1"></textarea>
+            <!-- IMPORTANTE: name="message" -->
+            <textarea
+              required
+              placeholder=" "
+              id="message"
+              rows="1"
+              name="message"
+            ></textarea>
             <label for="message">Mensaje</label>
           </div>
 
-          <button type="submit" class="submit-btn">
+          <button type="submit" class="submit-btn" id="submit-btn">
             ENVIAR MENSAJE <i class="ri-send-plane-fill"></i>
           </button>
+
+          <!-- Mensaje de estado (oculto por defecto) -->
+          <p
+            id="form-status"
+            style="
+              display: none;
+              color: #fff;
+              margin-top: 1rem;
+              font-family: 'Satoshi-R';
+              text-align: center;
+            "
+          ></p>
         </form>
       </div>
     </div>
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
-    <script src="js/contacto.js"></script>
   </body>
 </html>
