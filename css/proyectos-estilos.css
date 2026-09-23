@@ -16,7 +16,7 @@
 .project-gallery .gallery-item.full-width {
   grid-column: 1 / -1 !important;
   aspect-ratio: 21/9;
-} 
+}
 
 .project-gallery .gallery-item.vertical {
   aspect-ratio: 3/4;
@@ -194,7 +194,9 @@
   object-fit: cover;
   /* Grayscale to Color on hover effect */
   filter: grayscale(100%);
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 .scrolling-gallery-container:hover .scrolling-item img {

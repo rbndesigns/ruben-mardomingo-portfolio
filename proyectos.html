@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -67,6 +67,18 @@
     </header>
 
     <main>
+      <div class="filters-wrapper" data-aos="fade-up" data-aos-delay="100">
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">TODO</button>
+          <button class="filter-btn" data-filter="packaging">PACKAGING</button>
+          <button class="filter-btn" data-filter="editorial">EDITORIAL</button>
+          <button class="filter-btn" data-filter="branding">BRANDING</button>
+          <button class="filter-btn" data-filter="web">DISEÑO WEB</button>
+          <button class="filter-btn" data-filter="3d">3D MODEL</button>
+          <button class="filter-btn" data-filter="extra">EXTRA</button>
+        </div>
+      </div>
+
       <section class="gallery gallery-proyectos" id="proyectos">
         <a
           data-aos="fade-up"
@@ -74,9 +86,10 @@
           data-aos-duration="1000"
           href="another.html"
           class="gallery-item"
+          data-category="editorial"
         >
           <img
-            src="https://ik.imagekit.io/jzanz3klfl/portfolio/AnOtheMagazine.png"
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/another/ANOTHER2.jpg?updatedAt=1767955810509"
             alt=""
           />
 
@@ -91,27 +104,27 @@
         </a>
 
         <a
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-          data-aos-duration="1500"
-          href="wip.html"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          href="habasket.html"
           class="gallery-item"
+          data-category="packaging"
         >
-          <video autoplay loop muted>
-            <source
-              src="https://ik.imagekit.io/jzanz3klfl/portfolio/MonsterPortada.mp4"
-              type="video/mp4"
-            />
-          </video>
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/CERVEZA/botella%20personalizada%203.png"
+            alt=""
+          />
 
           <div class="gallery-overlay">
             <i class="ri-arrow-right-down-line"></i>
-            <h6>MONSTER <br />RENDER</h6>
+            <h6>
+              CREACIÓN <br />
+              DE PACKAGING
+            </h6>
             <p>
-              Render y animación 3D de Monster Ultra White, desarrollado para
-              formato YouTube Ads y consumo digital.
+              Creación de un packaging para una cerveza creada por y para
+              diseñadores gráficos.
             </p>
-            <p></p>
           </div>
         </a>
 
@@ -120,6 +133,7 @@
           data-aos-duration="1500"
           href="wip.html"
           class="gallery-item"
+          data-category="web"
         >
           <video autoplay loop muted>
             <source
@@ -143,6 +157,7 @@
           data-aos-duration="1500"
           href="olvana.html"
           class="gallery-item"
+          data-category="editorial"
         >
           <video autoplay loop muted>
             <source
@@ -166,6 +181,7 @@
           data-aos-duration="2000"
           href="suiza.html"
           class="gallery-item"
+          data-category="web"
         >
           <video autoplay loop muted>
             <source
@@ -188,6 +204,7 @@
           data-aos-duration="2000"
           href="milbona.html"
           class="gallery-item"
+          data-category="packaging"
         >
           <img
             src="https://ik.imagekit.io/jzanz3klfl/portfolio/Milbona%20Portada?updatedAt=1760975183118
@@ -212,6 +229,7 @@
           data-aos-duration="2000"
           href="wip.html"
           class="gallery-item"
+          data-category="editorial"
         >
           <img
             src="https://ik.imagekit.io/jzanz3klfl/portfolio/libros-portada?updatedAt=1763542286608
@@ -221,10 +239,10 @@
 
           <div class="gallery-overlay">
             <i class="ri-arrow-right-down-line"></i>
-            <h6>IDENTIDAD <br />DE MARCA</h6>
+            <h6>COLECCIÓN <br />DE LIBROS</h6>
             <p>
-              Nueva identidad visual para Kaotiko, orientada a modernizar la
-              marca.
+              Colección de libros con troquel y encuadernación especial,
+              desarrollada para un proyecto de diseño editorial.
             </p>
           </div>
         </a>
@@ -233,6 +251,7 @@
           data-aos-duration="2000"
           href="habasket.html"
           class="gallery-item"
+          data-category="branding"
         >
           <img
             src="https://ik.imagekit.io/jzanz3klfl/portfolio/HA.jpg?updatedAt=1763492122200"
@@ -246,6 +265,32 @@
               Rediseño integral del club HA BASKET para acompañar su salto a una
               identidad más sólida y profesional
             </p>
+          </div>
+        </a>
+
+        <a
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1500"
+          href="wip.html"
+          class="gallery-item"
+          data-category="3d"
+        >
+          <video autoplay loop muted>
+            <source
+              src="https://ik.imagekit.io/jzanz3klfl/portfolio/MonsterPortada.mp4"
+              type="video/mp4"
+            />
+          </video>
+
+          <div class="gallery-overlay">
+            <i class="ri-arrow-right-down-line"></i>
+            <h6>MONSTER <br />RENDER</h6>
+            <p>
+              Render y animación 3D de Monster Ultra White, desarrollado para
+              formato YouTube Ads y consumo digital.
+            </p>
+            <p></p>
           </div>
         </a>
       </section>
@@ -281,7 +326,22 @@
 
     <script src="js/script.js"></script>
     <script>
-      AOS.init();
+      // 1. Evitamos que el navegador recuerde el scroll al hacer Ctrl+R (Fuerza a cargar arriba)
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+
+      // 2. Inicializamos AOS con unos ajustes más estables
+      AOS.init({
+        once: true, // Recomendado: Hace que la animación ocurra solo 1 vez. Da un toque más premium.
+        offset: 50, // Margen de píxeles antes de que salte
+      });
+
+      // 3. LA MAGIA: Le decimos a AOS que recalcule TODO cuando las imágenes y vídeos hayan cargado
+      window.addEventListener("load", function () {
+        AOS.refresh();
+      });
     </script>
   </body>
 </html>

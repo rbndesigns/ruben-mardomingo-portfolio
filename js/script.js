@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 1,
         ease: "power3.out",
       },
-      "-=0.8"
+      "-=0.8",
     )
     .from(
       ".info-card",
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 1,
         ease: "power3.out",
       },
-      "-=0.8"
+      "-=0.8",
     );
 
   // --- 2. PARALLAX EFFECT (Sutil al mover el ratón) ---
@@ -237,4 +237,58 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const galleryItems = document.querySelectorAll(".gallery-item"); // Tus tarjetas de proyecto
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // 1. Quitar la clase active a todos
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      // 2. Ponérsela al clicado
+      btn.classList.add("active");
+
+      // 3. Saber qué categoría hemos elegido
+      const filterValue = btn.getAttribute("data-filter");
+
+      // 4. Filtrar
+      galleryItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category");
+
+        if (filterValue === "all" || itemCategory === filterValue) {
+          // SI COINCIDE: Lo mostramos
+          if (item.classList.contains("hidden-by-filter")) {
+            item.classList.remove("hidden-by-filter");
+            // Mini delay para que el display block actúe antes del fade
+            setTimeout(() => {
+              item.classList.remove("filtering-out");
+            }, 20);
+          } else {
+            item.classList.remove("filtering-out");
+          }
+        } else {
+          // SI NO COINCIDE: Fade out y luego display none
+          item.classList.add("filtering-out");
+          // Esperamos a que acabe la transición CSS (350ms) para ocultarlo del DOM
+          setTimeout(() => {
+            if (item.classList.contains("filtering-out")) {
+              item.classList.add("hidden-by-filter");
+            }
+          }, 350);
+        }
+      });
+
+      // PRO-TIP: Refrescar AOS y ScrollTrigger para recalcular alturas
+      setTimeout(() => {
+        if (typeof AOS !== "undefined") {
+          AOS.refresh(); // <--- ESTO ES LA MAGIA QUE ARREGLA HA BASKET
+        }
+        if (typeof ScrollTrigger !== "undefined") {
+          ScrollTrigger.refresh();
+        }
+      }, 400);
+    });
+  });
 });
