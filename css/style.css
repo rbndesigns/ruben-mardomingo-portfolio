@@ -895,6 +895,122 @@ footer h2 {
   display: none !important;
 }
 
+/* HAVEN PREVIEW SECTION */
+.haven-section {
+  padding: 40px 5%;
+}
+
+.haven-wrapper {
+  background: #111;
+  border-radius: 24px;
+  padding: 50px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #222;
+}
+
+.haven-image-col {
+  flex: 1.2;
+  min-width: 320px;
+}
+
+.haven-browser-dots {
+  display: flex;
+  gap: 6px;
+  padding: 8px 10px 12px 10px;
+}
+
+.haven-preview-img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  display: block;
+}
+
+.haven-content-col {
+  flex: 1;
+  min-width: 320px;
+  color: white;
+}
+
+.haven-title {
+  font-size: 36px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.haven-subtitle {
+  color: #888;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.haven-description {
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  font-size: 15px;
+}
+
+.haven-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.haven-btn {
+  padding: 14px 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.haven-btn-primary {
+  background: white;
+  color: black;
+}
+
+.haven-btn-primary:hover {
+  background: #e5e5e5;
+  transform: translateY(-2px);
+}
+
+.haven-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid #333;
+}
+
+.haven-btn-secondary:hover {
+  border-color: white;
+  background: #1a1a1a;
+}
+
+.haven-note {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .haven-wrapper {
+    padding: 30px 24px;
+    gap: 30px;
+  }
+  .haven-title {
+    font-size: 28px;
+  }
+}
+
 /* =========================================
    RESPONSIVE (Móviles)
    ========================================= */
