@@ -374,3 +374,20 @@
     font-size: 0.9rem;
   }
 }
+
+/* Hoaki - 2x2 sin recorte */
+.hoaki-grid {
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+}
+
+.hoaki-grid .grid-item {
+  aspect-ratio: auto; /* quita el 3/4 y 16/9 que te corta */
+  background: #141010; /* relleno para que no queden huecos blancos */
+}
+
+.hoaki-grid .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* esto es lo que hace el fit sin cortar */
+  aspect-ratio: auto;
+}
