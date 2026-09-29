@@ -20,19 +20,22 @@
 .memoria-preview {
   padding: 2rem 4rem 6rem;
 }
+
 .memoria-preview .iframe-wrapper {
   aspect-ratio: 16/9;
-  background: #000;
+
   overflow: hidden;
-  border: 1px solid #222;
+
+  position: relative;
 }
 .memoria-preview .iframe-wrapper video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   object-position: center;
-  background: #000;
   display: block;
+  /* FIX VERTICAL -> HORIZONTAL: el .mov está grabado en 9:16, lo giramos 90deg para verlo en 16:9 */
+  transform: rotate(270deg) scale(1.78);
+  transform-origin: center center;
 }
 
 .insta-grid-fixed {
