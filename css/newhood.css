@@ -33,7 +33,6 @@
   height: 100%;
   object-position: center;
   display: block;
-  /* FIX VERTICAL -> HORIZONTAL: el .mov está grabado en 9:16, lo giramos 90deg para verlo en 16:9 */
   transform: rotate(270deg) scale(1.78);
   transform-origin: center center;
 }
