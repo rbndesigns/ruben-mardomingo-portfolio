@@ -3,65 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hoaki - Ruben M</title>
+    <title>NewHood - Ruben M</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/proyectos-estilos.css" />
-
+    <link rel="stylesheet" href="css/newhood.css" />
     <link
       rel="icon"
       type="image/png"
       href="https://ik.imagekit.io/jzanz3klfl/portfolio/favicon.svg"
       sizes="128x128"
     />
-
-    <!-- Remix Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
     />
-
-    <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
       rel="stylesheet"
     />
-
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   </head>
-
   <body>
-    <!-- Fondo Animado de Ruido -->
     <div class="bg"></div>
-
     <header data-aos="fade-down" data-aos-duration="2000">
       <div class="logo">
-        <a href="index.html">
-          <img
+        <a href="index.html"
+          ><img
             src="https://ik.imagekit.io/jzanz3klfl/portfolio/Logotipo_VerticalBlanco.svg?updatedAt=1760980637728"
             alt="Ruben M Logo"
-          />
-        </a>
+        /></a>
       </div>
       <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </div>
-
       <nav id="nav">
-        <a href="index.html">HOME</a>
-        <a href="proyectos.html">PROYECTOS</a>
-        <a href="sobremi.html">SOBRE MÍ</a>
-        <a href="contacto.html">CONTACTO</a>
+        <a href="index.html">HOME</a><a href="proyectos.html">PROYECTOS</a
+        ><a href="sobremi.html">SOBRE MÍ</a><a href="contacto.html">CONTACTO</a>
       </nav>
-
       <div class="icono-derecha">
         <img
           src="https://ik.imagekit.io/jzanz3klfl/portfolio/Isotipo_Blanco.svg?updatedAt=1760980637768"
@@ -69,7 +50,6 @@
         />
       </div>
     </header>
-
     <main>
       <section
         class="project-header"
@@ -77,101 +57,170 @@
         data-aos-duration="1500"
       >
         <div class="project-info">
-          <h2>COLECCIÓN DE LIBROS</h2>
-          <h3>MAQUETACIÓN Y CREACIÓN DE REVISTA · TRABAJO EDITORIAL</h3>
+          <h2>NEWHOOD</h2>
+          <h3>
+            AGENCIA DE BRANDING PARA CLUBES DE BALONCESTO DE BARRIO · TFG
+            2025-26
+          </h3>
         </div>
       </section>
-
-      <section class="project-grid" id="project-gallery">
-        <!-- Fila 1: Imagen Grande (Ancho completo) -->
-        <figure
-          class="grid-item full"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          <video>
+      <section class="video-hero-wrapper" data-aos="fade-up">
+        <div class="video-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            poster="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/Profile.jpg"
+          >
             <source
-              src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/mardomingo_ruben_casestudy.mp4"
+              src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/mardomingo_ruben_casestudy.mp4?updatedAt=1790425292484"
               type="video/mp4"
             />
           </video>
-        </figure>
+        </div>
+        <div
+          class="content-block"
+          style="padding-left: 0; padding-right: 0; padding-bottom: 0"
+        >
+          <div class="text-left"><h3>CASE STUDY</h3></div>
+          <div class="text-right">
+            <p>
+              NewHood nace de una brecha real: 89% orgullo vs 26% identificación
+              visual (n=38). Validado con HA Basket, evolución de Highstep
+              Academy.
+            </p>
+          </div>
+        </div>
       </section>
-      <!-- 2. RESUMEN / CHAPEAU -->
+      <section class="iframe-container memoria-preview" data-aos="fade-up">
+        <div class="iframe-title">
+          <h3>VISTA PREVIA MEMORIA</h3>
+          <p>TFG completo — 78 páginas · Doble Diamante + Manual HA Basket</p>
+        </div>
+        <div class="iframe-wrapper">
+          <video controls playsinline autoplay muted loop>
+            <source
+              src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/memoria_vista_previa.mov"
+              type="video/quicktime"
+            />
+            <source
+              src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/memoria_vista_previa.mov"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
       <section class="content-block" data-aos="fade-up">
         <div class="text-left">
-          <h3>ESTRATEGIA VISUAL</h3>
+          <h3>COMUNICACIÓN DIGITAL: REDES SOCIALES</h3>
         </div>
-        <div class="text-right">
-          <p>
-            El objetivo principal fue crear una colección que destaque en punto
-            de venta frente a la saturación editorial. El troquel actúa como
-            reclamo visual inmediato que invita a coger el libro y comprarlo,
-            pero no es un gesto gratuito: cada forma codifica el movimiento que
-            contiene.
+      </section>
+      <div class="insta-grid-fixed" data-aos="fade-up">
+        <figure class="grid-item">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/Profile.jpg"
+            alt="Perfil"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="grid-item">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/Post-1.jpg"
+            alt="Post 1"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="grid-item">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/Post-2.jpg"
+            alt="Post 2"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="grid-item">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/Post%20(2).jpg"
+            alt="Post 3"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+      <section class="content-block" data-aos="fade-up">
+        <div class="text-left"><h3>WEB · NEW-HOOD.COM</h3></div>
+      </section>
+      <section class="web-iframe-container" data-aos="fade-up">
+        <div class="iframe-title">
+          <h3>VISTA PREVIA INTERACTIVA WEB</h3>
+          <p>Explora el prototipo funcional de NewHood TFG</p>
+        </div>
+        <div class="iframe-wrapper">
+          <iframe
+            src="https://rbndesigns.github.io/newhood-tfg/"
+            title="NewHood Web"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section class="content-block" data-aos="fade-up">
+        <div class="text-left">
+          <h3>SPOT INSTAGRAM / TIKTOK</h3>
+          <p
+            style="
+              font-family: Satoshi-R;
+              color: #888;
+              font-size: 0.9rem;
+              margin-top: 0.5rem;
+            "
+          >
+            3D · CINEMA 4D + REDSHIFT
           </p>
-          <br />
-          <ul>
-            <li>
-              <span>Target</span>
-              <span>Estudiantes y Profesionales del Diseño</span>
-            </li>
-            <li><span>Concepto</span> <span>Troquel como reclamo</span></li>
-            <li>
-              <span>Rol</span> <span>Diseño Editorial & Dirección de Arte</span>
-            </li>
-          </ul>
         </div>
       </section>
-
-      <section class="project-grid hoaki-grid" id="project-gallery">
-        <figure class="grid-item" data-aos="fade-up" data-aos-duration="1500">
+      <div class="spot-equal-wrapper" data-aos="fade-up">
+        <div class="spot-equal-item video-item">
+          <video autoplay muted loop playsinline controls>
+            <source
+              src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/mardomingo_ruben_spot.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+        <div class="spot-equal-item mockup-item">
           <img
-            src="https://ik.imagekit.io/jzanz3klfl/portfolio/hoaki/libro%20dentro%202.jpg"
-            alt="Hoaki - Libro dentro 2"
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/mockup%20SPOT%20INSTAGRAM%20AD.png"
+            alt="Mockup Spot Instagram Ad - Cinema 4D"
             loading="lazy"
           />
-        </figure>
-        <figure
-          class="grid-item"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-delay="100"
-        >
-          <img
-            src="https://ik.imagekit.io/jzanz3klfl/portfolio/hoaki/libro%20dentro.jpg"
-            alt="Hoaki - Libro dentro"
-            loading="lazy"
-          />
-        </figure>
-        <figure class="grid-item" data-aos="fade-up" data-aos-duration="1500">
-          <img
-            src="https://ik.imagekit.io/jzanz3klfl/portfolio/hoaki/fuera%20mockup.jpg"
-            alt="Hoaki - Fuera mockup"
-            loading="lazy"
-          />
-        </figure>
-        <figure
-          class="grid-item"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-delay="100"
-        >
-          <img
-            src="https://ik.imagekit.io/jzanz3klfl/portfolio/hoaki/guardas.jpg"
-            alt="Hoaki - Guardas"
-            loading="lazy"
-          />
-        </figure>
+        </div>
+      </div>
+      <section class="content-block" data-aos="fade-up">
+        <div class="text-left"><h3>EMAIL MARKETING & ACTIVACIÓN</h3></div>
       </section>
-
+      <div class="email-wrapper-fixed" data-aos="fade-up">
+        <div class="email-item">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/email-marketing.jpg"
+            alt="Email 1"
+            loading="lazy"
+          />
+        </div>
+        <div class="email-item">
+          <img
+            src="https://ik.imagekit.io/jzanz3klfl/portfolio/newhood/email-marketing1.jpg"
+            alt="Email 2"
+            loading="lazy"
+          />
+        </div>
+      </div>
       <section class="botones">
-        <a class="boton-default" href="proyectos.html">
-          <span>PROYECTOS</span> <i class="ri-arrow-right-down-line"></i>
-        </a>
+        <a class="boton-default" href="proyectos.html"
+          ><span>PROYECTOS</span> <i class="ri-arrow-right-down-line"></i
+        ></a>
       </section>
     </main>
-
     <footer
       data-aos="fade-up"
       data-aos-anchor-placement="top-bottom"
@@ -189,17 +238,14 @@
         <div class="social-links">
           <a target="_blank" href="https://www.instagram.com/rbn.designs/"
             >INSTAGRAM</a
-          >
-          <a
+          ><a
             target="_blank"
             href="https://www.linkedin.com/in/rub%C3%A9n-mardomingo-dom%C3%ADnguez-353567361/"
             >LINKEDIN</a
-          >
-          <a target="_blank" href="#behance">BEHANCE</a>
+          ><a target="_blank" href="#behance">BEHANCE</a>
         </div>
       </div>
     </footer>
-
     <script src="js/script.js"></script>
     <script>
       AOS.init();
