@@ -46,8 +46,7 @@
 }
 .insta-grid-fixed .grid-item {
   aspect-ratio: auto;
-  background: #141010;
-  border: 1px solid #222;
+
   overflow: hidden;
   display: flex;
   align-items: center;
