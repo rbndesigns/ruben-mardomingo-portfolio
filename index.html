@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ruben M - Portfolio</title>
+    <!-- Dentro de <head>, antes de cargar el CSS -->
+    <script>
+      try {
+        if (localStorage.getItem("portfolioIntroSeen") !== "true") {
+          document.documentElement.classList.add("show-intro-video");
+          localStorage.setItem("portfolioIntroSeen", "true");
+        }
+      } catch (error) {
+        document.documentElement.classList.add("show-intro-video");
+      }
+    </script>
     <link rel="stylesheet" href="css/style.css" />
 
     <link
@@ -36,6 +47,26 @@
   </head>
 
   <body>
+    <!-- Justo después de <body> -->
+    <div
+      class="intro-video-overlay"
+      id="intro-video-overlay"
+      aria-label="Introducción de vídeo"
+      aria-modal="true"
+      role="dialog"
+      aria-hidden="false"
+    >
+      <video id="intro-video" autoplay muted playsinline preload="auto">
+        <source
+          src="https://ik.imagekit.io/jzanz3klfl/portfolio/Comp%201.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <button class="intro-video-skip" id="intro-video-skip" type="button">
+        Saltar introducción
+      </button>
+    </div>
     <header data-aos="fade-down" data-aos-duration="2000">
       <div class="logo">
         <a href="index.html">

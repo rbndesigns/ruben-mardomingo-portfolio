@@ -4,7 +4,38 @@ const nav = document.getElementById("nav");
 hamburger.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
+const introOverlay = document.getElementById("intro-video-overlay");
 
+if (
+  introOverlay &&
+  document.documentElement.classList.contains("show-intro-video")
+) {
+  const introVideo = document.getElementById("intro-video");
+  const skipIntro = document.getElementById("intro-video-skip");
+
+  introOverlay.setAttribute("aria-hidden", "false");
+  document.body.classList.add("intro-video-open");
+
+  const onIntroKeydown = (event) => {
+    if (event.key === "Escape") closeIntro();
+  };
+
+  const closeIntro = () => {
+    document.documentElement.classList.remove("show-intro-video");
+    introOverlay.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("intro-video-open");
+    document.removeEventListener("keydown", onIntroKeydown);
+    introVideo.pause();
+  };
+
+  introVideo.addEventListener("ended", closeIntro, { once: true });
+  skipIntro.addEventListener("click", closeIntro, { once: true });
+  document.addEventListener("keydown", onIntroKeydown);
+
+  introVideo.play().catch(() => {
+    // El botón para saltar queda disponible si la reproducción automática falla.
+  });
+}
 // Cerrar menú al hacer clic en un enlace
 const navLinks = nav.querySelectorAll("a");
 navLinks.forEach((link) => {
